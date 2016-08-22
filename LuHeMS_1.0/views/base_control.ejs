@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <title>高档叶菜植物工厂——六合基地</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="/css/bootstrap.css" rel="stylesheet">
+    <!--external css-->
+    <link href="/font-awesome/css/font-awesome.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="/lineicons/style.css">
+
+    <!-- Custom styles for this template -->
+    <link href="/css/style.css" rel="stylesheet">
+    <link href="/css/style-responsive.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <!--<script>-->
+        <!--var ws;//WebSocket对象-->
+        <!--var wsUrl = "ws://127.0.0.1:2002";//支持WebSocket协议的服务器端地址-->
+
+        <!--function connection() {-->
+            <!--if ("WebSocket" in window) {-->
+                <!--ws = new WebSocket(wsUrl);-->
+            <!--}-->
+            <!--else if ("MozWebSocket" in window) {-->
+                <!--ws = new MozWebSocket(wsUrl);-->
+            <!--} else {-->
+                <!--alert("当前浏览器不支持WebSocket");-->
+
+           <!--}-->
+            <!--//注册各类回调-->
+            <!--ws.onopen = function () {-->
+                <!--alert("连接服务器成功");.0-->
+            <!--}-->
+
+            <!--ws.onclose = function () {-->
+                <!--alert("与服务器断开连接");-->
+            <!--}-->
+            <!--ws.onerror = function () {-->
+                <!--alert("数据传输发生错误");-->
+            <!--}-->
+            <!--ws.onmessage = function (receiveMsg) {-->
+                <!--alert(receiveMsg.data);-->
+            <!--}-->
+        <!--}-->
+        <!--function sendMessage() {-->
+            <!--//尝试向服务端发送消息-->
+
+            <!--ws.send("Hello World");-->
+
+        <!--}-->
+
+    <!--</script>-->
+</head>
+
+<body>
+
+<section id="container" >
+    <!-- **********************************************************************************************************************************************************
+    TOP BAR CONTENT & NOTIFICATIONS
+    *********************************************************************************************************************************************************** -->
+    <!--header start-->
+    <header class="header black-bg">
+        <div class="sidebar-toggle-box">
+            <div class="fa fa-bars tooltips" data-placement="right" data-original-title="切换导航"></div>
+        </div>
+        <!--logo start-->
+        <a href="/index" class="logo"><b><strong>高档叶菜植物工厂——六合基地</strong>管理系统</b></a>
+        <!--logo end-->
+        <div class="top-menu">
+            <ul class="nav pull-right top-menu">
+                <li><a class="logout" href="/"><i class="fa fa-power-off"></i><span>&nbsp&nbsp注销</span></a></li>
+            </ul>
+        </div>
+    </header>
+    <!--header end-->
+
+    <!-- **********************************************************************************************************************************************************
+    MAIN SIDEBAR MENU
+    *********************************************************************************************************************************************************** -->
+    <!--header start-->
+    <header class="header black-bg">
+        <div class="sidebar-toggle-box">
+            <div class="fa fa-bars tooltips" data-placement="right" data-original-title="切换导航"></div>
+        </div>
+        <!--logo start-->
+        <a href="/index" class="logo"><b><strong>高档叶菜植物工厂——六合基地</strong>管理系统</b></a>
+        <!--logo end-->
+        <div class="top-menu">
+            <ul class="nav pull-right top-menu">
+                <li><a class="logout" href="/"><i class="fa fa-power-off"></i><span>&nbsp&nbsp注销</span></a></li>
+            </ul>
+        </div>
+    </header>
+    <!--header end-->
+
+    <!-- **********************************************************************************************************************************************************
+    MAIN SIDEBAR MENU
+    *********************************************************************************************************************************************************** -->
+    <!--sidebar start-->
+    <aside>
+        <div id="sidebar"  class="nav-collapse ">
+            <!-- sidebar menu start-->
+            <ul class="sidebar-menu" id="nav-accordion">
+
+                <p class="centered"><img src="/img/jaas.png" class="img-circle" width="60px"></p>
+                <h5 class="centered">六合基地</h5>
+
+                <!-- <li class="mt">
+                    <a class="" href="users.html">
+                        <i class="fa fa-user"></i>
+                        <span>用户管理</span>
+                    </a>
+                </li> -->
+                <li class="mt">
+                    <a class="" href="/index">
+                        <i class="fa fa-desktop"></i>
+                        <span>首页</span>
+                    </a>
+                </li>
+
+                <li class="sub-menu">
+                    <a class="" href="/users" >
+                        <i class="fa fa-user"></i>
+                        <span>用户管理</span>
+                    </a>
+                </li>
+
+                <li class="sub-menu">
+                    <a class="" href="javascript:;" >
+                        <i class="fa fa-cogs"></i>
+                        <span>温室配置</span>
+                    </a>
+                    <ul class="sub">
+                        <li><a  href="/base_manage/base_info">温室基本信息</a></li>
+                        <li><a  href="/base_manage/base_config">温室运行配置</a></li>
+                    </ul>
+                </li>
+                <li class="sub-menu">
+                    <a href="" class="active">
+                        <i class="fa fa-institution"></i>
+                        <span>温室管理</span>
+                    </a>
+                    <ul class="sub">
+                        <li class="active"><a  href="/base_manage/base_control">温室控制</a></li>
+                        <li><a  href="/base_manage/base_log">养护日志</a></li>
+                    </ul>
+                </li>
+                <li class="sub-menu">
+                    <a class="" href="/chart" >
+                        <i class=" fa fa-bar-chart-o"></i>
+                        <span>历史数据</span>
+                    </a>
+                </li>
+
+            </ul>
+            <!-- sidebar menu end-->
+        </div>
+    </aside>
+    <!--sidebar end-->
+
+    <!-- **********************************************************************************************************************************************************
+    MAIN CONTENT
+    *********************************************************************************************************************************************************** -->
+    <!--main content start-->
+    <section id="main-content">
+        <section class="wrapper site-min-height">
+            <br />
+            <div class="row">
+                <div class="col-md-2 col-md-offset-4">
+                    <select class="form-control" style="text-align:center">
+                        <option>---请选择---</option>
+                        <option>温室一</option>
+                        <option>温室二</option>
+                        <option>温室三</option>
+                    </select>
+                </div>
+                <div class="col-md-2">
+                    <button class="btn btn-primary btn-success"><i class="fa fa-search"></i>&nbsp&nbsp选择</button>
+                </div>
+            </div>
+            <hr>
+
+            <div class="row">
+                <!-- 传感器数据展示 -->
+                <div class="col-md-12">
+                    <div class="content-panel">
+                        <h4 class="base_name" style="font-weight:bold;color:#009900"><i class="fa fa-university"></i>&nbsp&nbsp温室一环境</h4>
+                        <hr>
+                        <table class="table table-hover">
+                            <thead>
+                            <tr>
+                                <th style="font-weight:bold">运行模式：<span style="color:red;font-style:oblique;font-size:large">手动</span></th>
+                                <th>光照度 /LUX</th>
+                                <th>温度 /℃</th>
+                                <th>湿度 /%</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td style="font-weight:bold">平均值</td>
+                                <td>14250</td>
+                                <td>32.5</td>
+                                <td>19.5</td>
+                            </tr>
+                            <tr>
+                                <td style="font-weight:bold">传感器一</td>
+                                <td>13250</td>
+                                <td>32</td>
+                                <td>20</td>
+                            </tr>
+                            <tr>
+                                <td style="font-weight:bold">传感器二</td>
+                                <td>15203</td>
+                                <td>33</td>
+                                <td>19</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- 设备运行状态 -->
+                <div class="col-md-12">
+                    <div class="content-panel">
+                        <table class="table table-hover">
+                            <h4 id="base_name" style="font-weight:bold;color:#009900"><i class="fa fa-cog"></i>&nbsp&nbsp温室一设备</h4>
+                            <hr>
+                            <thead>
+                            <tr>
+                                <th>高压泵</th>
+                                <th>湿帘风机-1/3</th>
+                                <th>湿帘风机-2/4</th>
+                                <th>湿帘风机5</th>
+                                <th>环流风机-1/2</th>
+                                <th>外遮阳电机</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td><img id="device_1" data-toggle='modal' href='' class="device_img device_2" src="/img/static.bmp"></td>
+                                <td><img id="device_2" data-toggle='modal' href='' class="device_img device_2" src="/img/forward.gif"></td>
+                                <td><img id="device_3" data-toggle='modal' href='' class="device_img device_2" src="/img/static.bmp"></td>
+                                <td><img id="device_4" data-toggle='modal' href='' class="device_img device_2" src="/img/backward.gif"></td>
+                                <td><img id="device_5" data-toggle='modal' href='' class="device_img device_2" src="/img/static.bmp"></td>
+                                <td><img id="device_6" data-toggle='modal' href='' class="device_img device_3" src="/img/static.bmp"></td>
+                            </tr>
+                            </tbody>
+                            <thead>
+                            <tr>
+                                <th>顶窗卷膜器</th>
+                                <th>侧窗卷膜器-1</th>
+                                <th>侧窗卷膜器-2</th>
+                                <th>侧窗卷膜器-3</th>
+                                <th>电磁阀</th>
+                                <th>湿帘风机水泵</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td><img id="device_7" data-toggle='modal' href='' class="device_img device_3" src="/img/backward.gif"></td>
+                                <td><img id="device_8" data-toggle='modal' href='' class="device_img device_3" src="/img/static.bmp"></td>
+                                <td><img id="device_9" data-toggle='modal' href='' class="device_img device_3" src="/img/static.bmp"></td>
+                                <td><img id="device_10" data-toggle='modal' href='' class="device_img device_3" src="/img/static.bmp"></td>
+                                <td><img id="device_11" data-toggle='modal' href='' class="device_img device_2" src="/img/forward.gif"></td>
+                                <td><img id="device_12" data-toggle='modal' href='' class="device_img device_2" src="/img/static.bmp"></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+
+        </section>
+    </section><!-- /MAIN CONTENT -->
+
+    <!--main content end-->
+</section>
+<!-- modal start -->
+<div aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" tabindex="-1" id="myModal_3" class="modal fade modal_center">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" style="color:red;font-weight:bold">控制设备！</h4>
+            </div>
+            <div class="modal-body">
+                <h5>你确定要控制<span id="deleted_username_3">用户</span>&nbsp&nbsp吗？</h5>
+            </div>
+            <div class="modal-footer">
+                <button data-dismiss="modal" class="btn btn-success btn-open" type="button"><i class="fa fa-forward"></i>开启</button>
+                <button data-dismiss='modal' class="btn btn-theme btn-close" type="button"><i class="fa fa-backward"></i>关闭</button>
+                <button data-dismiss="modal" class="btn btn-primary btn-stop" type="button"><i class="fa fa-stop"></i>停止</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" tabindex="-1" id="myModal_2" class="modal fade modal_center">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" style="color:red;font-weight:bold">控制设备！</h4>
+            </div>
+            <div class="modal-body">
+                <h5>你确定要控制<span id="deleted_username_2">用户</span>&nbsp&nbsp吗？</h5>
+            </div>
+            <div class="modal-footer">
+                <button data-dismiss="modal" class="btn btn-success btn-open" type="button"><i class="fa fa-forward"></i>开启</button>
+                <button data-dismiss="modal" class="btn btn-primary btn-close" type="button"><i class="fa fa-stop"></i>停止</button>
+            </div>
+        </div>
+    </div>
+</div>
+<input id="deviceID" type="hidden" value=""/>
+<!-- modal end -->
+<!-- js placed at the end of the document so the pages load faster -->
+<script src="/js/jquery.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/jquery-ui-1.9.2.custom.min.js"></script>
+<!--<script src="/js/jquery.ui.touch-punch.min.js"></script>-->
+<script class="include" type="text/javascript" src="/js/jquery.dcjqaccordion.2.7.js"></script>
+<script src="/js/jquery.scrollTo.min.js"></script>
+<script src="/js/jquery.nicescroll.js" type="text/javascript"></script>
+
+
+<!--common script for all pages-->
+<script src="/js/common-scripts.js"></script>
+<!--让控制设备的modal居中显示-->
+<script src="/js/modal_center.js"></script>
+<!--script for this page-->
+<script src="/js/myJS/socket.io.js"></script>
+<script src="/js/myJS/BaseControl.js"></script>
+
+<script>
+
+</script>
+</body>
+</html>

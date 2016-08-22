@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="Dashboard">
+    <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
+
+    <title>DASHGUM - Bootstrap Admin Template</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="/css/bootstrap.css" rel="stylesheet">
+    <!--external css-->
+    <link href="/font-awesome/css/font-awesome.css" rel="stylesheet" />
+    <link rel="stylesheet" href="http://cdn.oesmith.co.uk/morris-0.4.3.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap-datetimepicker.min.css">
+    <!-- Custom styles for this template -->
+    <link href="/css/style.css" rel="stylesheet">
+    <link href="/css/style-responsive.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+<section id="container" >
+    <!-- **********************************************************************************************************************************************************
+    TOP BAR CONTENT & NOTIFICATIONS
+    *********************************************************************************************************************************************************** -->
+    <!--header start-->
+    <header class="header black-bg">
+        <div class="sidebar-toggle-box">
+            <div class="fa fa-bars tooltips" data-placement="right" data-original-title="切换导航"></div>
+        </div>
+        <!--logo start-->
+        <a href="/index" class="logo"><b><strong>高档叶菜植物工厂——六合基地</strong>管理系统</b></a>
+        <!--logo end-->
+        <div class="top-menu">
+            <ul class="nav pull-right top-menu">
+                <li><a class="logout" href="/"><i class="fa fa-power-off"></i><span>&nbsp&nbsp注销</span></a></li>
+            </ul>
+        </div>
+    </header>
+    <!--header end-->
+
+    <!-- **********************************************************************************************************************************************************
+    MAIN SIDEBAR MENU
+    *********************************************************************************************************************************************************** -->
+    <!--sidebar start-->
+    <aside>
+        <div id="sidebar"  class="nav-collapse ">
+            <!-- sidebar menu start-->
+            <ul class="sidebar-menu" id="nav-accordion">
+
+                <p class="centered"><img src="/img/jaas.png" class="img-circle" width="60px"></p>
+                <h5 class="centered">六合基地</h5>
+
+                <!-- <li class="mt">
+                    <a class="" href="users.html">
+                        <i class="fa fa-user"></i>
+                        <span>用户管理</span>
+                    </a>
+                </li> -->
+                <li class="mt">
+                    <a class="" href="/index">
+                        <i class="fa fa-desktop"></i>
+                        <span>首页</span>
+                    </a>
+                </li>
+
+                <li class="sub-menu">
+                    <a class="" href="/users" >
+                        <i class="fa fa-user"></i>
+                        <span>用户管理</span>
+                    </a>
+                </li>
+
+                <li class="sub-menu">
+                    <a class="" href="javascript:;" >
+                        <i class="fa fa-cogs"></i>
+                        <span>温室配置</span>
+                    </a>
+                    <ul class="sub">
+                        <li><a  href="/base_manage/base_info">温室基本信息</a></li>
+                        <li><a  href="/base_manage/base_config">温室运行配置</a></li>
+                    </ul>
+                </li>
+                <li class="sub-menu">
+                    <a href="" class="">
+                        <i class="fa fa-institution"></i>
+                        <span>温室管理</span>
+                    </a>
+                    <ul class="sub">
+                        <li><a  href="/base_manage/base_control">温室控制</a></li>
+                        <li><a  href="/base_manage/base_log">养护日志</a></li>
+                    </ul>
+                </li>
+                <li class="sub-menu">
+                    <a class="active" href="/chart" >
+                        <i class=" fa fa-bar-chart-o"></i>
+                        <span>历史数据</span>
+                    </a>
+                </li>
+
+            </ul>
+            <!-- sidebar menu end-->
+        </div>
+    </aside>
+    <!--sidebar end-->
+
+    <!-- **********************************************************************************************************************************************************
+    MAIN CONTENT
+    *********************************************************************************************************************************************************** -->
+    <!--main content start-->
+    <section id="main-content">
+        <section class="wrapper site-min-height">
+            <h3><i class="fa fa-angle-right"></i> 历史数据查询</h3>
+            <!-- page start-->
+            <!-- 时间选择 -->
+            <br>
+            <div class="row">
+                <div class="col-md-1 col-md-offset-1">
+                    <select id="base_id" class="form-control" style="text-align:center">
+                        <option>---请选择---</option>
+                        <option value="一">温室一</option>
+                        <option value="二">温室二</option>
+                        <option value="三">温室三</option>
+                    </select>
+                </div>
+                <div class="col-md-1">
+                    <select id="data_class" class="form-control" style="text-align:center">
+                        <option>---请选择---</option>
+                        <option value="一">光照度</option>
+                        <option value="二">温度</option>
+                        <option value="三">湿度</option>
+                    </select>
+                </div>
+                <div class="col-md-3">
+                    <div class="form-group row">
+                        <div class="col-md-4">
+                            <h4 for="dtp_input1" class="col-md- control-label" style="font-weight:bold;color:#009900;float:right">起始时间</h4>
+                        </div>
+                        <div class="input-group date form_date col-md-8" data-date="" data-date-format="yyyy MM dd" data-link-field="dtp_input1" data-link-format="yyyy-mm-dd">
+                            <input class="form-control" size="16" type="text" value="" readonly>
+                            <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+                            <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+                        </div>
+                        <input type="hidden" id="dtp_input1" value="" /><br/>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="form-group row">
+                        <div class="col-md-4">
+                            <h4 for="dtp_input2" class="col-md- control-label" style="font-weight:bold;color:#009900;float:right">截止时间</h4>
+                        </div>
+                        <div class="input-group date form_date col-md-8" data-date="" data-date-format="yyyy MM dd" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
+                            <input class="form-control" size="16" type="text" value="" readonly>
+                            <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+                            <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+                        </div>
+                        <input type="hidden" id="dtp_input2" value="" /><br/>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <button id="base_info_submit" class="btn btn-primary btn-success"><i class="fa fa-search"></i>&nbsp&nbsp<span>查询</span></button>
+                </div>
+            </div>
+
+
+            <div id="morris">
+                <div class="row mt">
+                    <div class="col-lg-12">
+                        <div class="content-panel">
+                            <h4><i class="fa fa-angle-right"></i> Chart Example 1</h4>
+                            <div class="panel-body">
+                                <div id="hero-graph" class="graph"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+            <!-- page end-->
+        </section>
+    </section><!-- /MAIN CONTENT -->
+
+    <!--main content end-->
+
+</section>
+
+<!-- js placed at the end of the document so the pages load faster -->
+<script src="/js/jquery.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script class="include" type="text/javascript" src="/js/jquery.dcjqaccordion.2.7.js"></script>
+<script src="/js/jquery.scrollTo.min.js"></script>
+<script src="/js/jquery.nicescroll.js" type="text/javascript"></script>
+
+
+<!--common script for all pages-->
+<script src="http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+<script src="http://cdn.oesmith.co.uk/morris-0.4.3.min.js"></script>
+<script src="/js/common-scripts.js"></script>
+<script type="text/javascript" src="/js/bootstrap-datetimepicker.js" charset="UTF-8"></script>
+<script type="text/javascript" src="/js/bootstrap-datetimepicker.zh-CN.js" charset="UTF-8"></script>
+<!--script for this page-->
+<script src="/js/morris-conf.js"></script>
+
+<script>
+    //custom select box
+    $(function(){
+        $('select.styled').customSelect();
+    });
+
+    $('.form_date').datetimepicker({
+        language:  'zh-CN',
+        weekStart: 1,
+        todayBtn:  1,
+        autoclose: 1,
+        todayHighlight: 1,
+        startView: 2,
+        minView: 2,
+        forceParse: 0
+    })
+</script>
+
+</body>
+</html>
