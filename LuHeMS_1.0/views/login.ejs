@@ -35,24 +35,24 @@ MAIN CONTENT
     <img src="/img/logo.png" class="img-responsive">
     <div class="container">
 
-        <form class="form-login" >
+        <div class="form-login">
             <h2 class="form-login-heading">登录</h2>
             <div class="login-wrap">
                 <input id="username" type="text" class="form-control" placeholder="用户名" autofocus>
                 <br>
-                <input id="password" type="password" class="form-control" placeholder="密码">
+                <input id="passwd" type="password" class="form-control" placeholder="密码">
                 <label class="checkbox">
 		                <span class="pull-right">
 		                    <a data-toggle="modal" href="login.html#myModal"> 忘记密码？</a>
-
+                            <!-- <a data-toggle="modal" href=""> 忘记密码？</a> -->
 		                </span>
                 </label>
-                <button id="login" class="btn btn-theme btn-block"  type="submit"><i class="fa fa-lock"></i> 登录</button>
+                <button id="login" class="btn btn-theme btn-block" type="submit"><i class="fa fa-lock"></i> 登录</button>
 
             </div>
 
             <!-- Modal -->
-            <div aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" tabindex="-1" id="myModal" class="modal fade modal_center">
+            <!-- <div aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" tabindex="-1" id="myModal" class="modal fade modal_center">
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
@@ -70,10 +70,10 @@ MAIN CONTENT
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
             <!-- modal -->
 
-        </form>
+        </div>
 
     </div>
 </div>
@@ -88,20 +88,23 @@ MAIN CONTENT
 <script src="js/modal_center.js"></script>
 <script>
     $.backstretch("/img/login-bg.jpg", {speed: 500});
-    $('#login').click(function(){
+     $('#login').click(function(){
         var login_user = {
-            username : $('#username').val();
-            password : $('#password').val();
+            username : $('#username').val(),
+            password : $('#passwd').val()
         };
-        $.ajax({
-            url : '/login',
-            type : 'post',
-            dataType : 'json',
-            data : login_user,
-            success : function(data,status) {
-
-            }
-        });
+//        $.ajax({
+//            url : '/',
+//            type : 'post',
+//            dataType : 'json',
+//            data : login_user,
+//            success : function(data,status) {
+//                alert('data:' + data + '  status:' + status);
+//            }
+//        });
+         $.post('/',login_user,function (data,stauts) {
+             alert('data:' + data + '  status:' + status);
+         })
     });
 </script>
 

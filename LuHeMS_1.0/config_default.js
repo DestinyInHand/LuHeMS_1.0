@@ -5,13 +5,12 @@ var path = require('path');
 
 var config = {
 
-    PORT : 3000,
     session_secret : "LuHeMS_secrect",
 
     //MYSQL配置参数
     MYSQL_USERNAME : 'root',
-    MYSQL_PASSWD : 'dingbo0414',
-    MYSQL_PORT : 3306,
+    MYSQL_PASSWD : '123456',
+    MYSQL_PORT : 3307,
     DATABASE_NAME : 'luhe'
 }
 

@@ -56,22 +56,22 @@ User.FindOrCreate = function(_username,_passwd) {
 };
 
 //用户信息验证
-User.Validation = function (_username,_passwd) {
+User.Validation = function (_username, _passwd) {
     User.find({where:{username:_username,password:_passwd}}).then(function (user) {
-        //console.log('姓名'+user.username+'密码：'+user.password);
-        if(user!=null)
-            return user;
-        else
-            return null;
+        console.log('----姓名'+user.username+'   密码：'+user.password);
+        return user;
     });
 };
 
 //根据用户名字段查找数据
 User.FindByUserName  = function (_username) {
     User.find({where:{username:_username}}).then(function (user) {
-        //console.log('姓名'+user.username+'密码：'+user.password);
-        if(user!=null)
+        console.log('----姓名'+user.username+'密码：'+user.password);
+        if(user != null)
+        {
+            console.log(JSON.stringify(user));
             return true;
+        }
         else
             return false;
     });
